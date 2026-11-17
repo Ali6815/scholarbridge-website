@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /__forms.html
+Disallow: /thank-you
+Sitemap: https://scholarbridge-website.netlify.app/sitemap.xml
