@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142e46">
+  <title>Pricing &amp; How It Works | ScholarBridge Research Consultancy</title>
+  <meta name="description" content="Explore how ScholarBridge research consultancy quotations, consultations, SadaPay transfers and service agreements work. Pricing is confirmed individually.">
+  <link rel="canonical" href="https://scholarbridge-website.netlify.app/pricing.html">
+  <meta property="og:site_name" content="ScholarBridge Research Consultancy">
+  <meta property="og:title" content="Pricing &amp; How It Works | ScholarBridge">
+  <meta property="og:description" content="Clear research consultancy quotations, booking and payment guidance with no invented prices.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://scholarbridge-website.netlify.app/pricing.html">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+/* Page-specific styles, designed to extend the existing ScholarBridge stylesheet. */
+:root { --pricing-navy:#10263c; --pricing-teal:#007e7a; --pricing-line:#e0e8e9; --pricing-muted:#627580; --pricing-cream:#fafaf7; }
+.price-page { overflow:hidden; }
+.price-page .container { position:relative; }
+.price-page .pr-hero { padding:94px 0 88px; background:linear-gradient(130deg,#eaf6f4 0%,#f8fbfa 60%,#fafaf7 100%); position:relative; border-bottom:1px solid var(--pricing-line); }
+.price-page .pr-hero:before { content:""; position:absolute; width:440px; height:440px; right:-160px; top:-200px; border:1px solid #c4e5de; border-radius:50%; box-shadow:0 0 0 48px #c4e5de22, 0 0 0 98px #c4e5de11; pointer-events:none; }
+.price-page .pr-hero-grid { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr); align-items:center; gap:72px; }
+.price-page .pr-hero h1 { font-size:clamp(3.2rem,5.5vw,5.6rem); letter-spacing:-.065em; line-height:1.03; max-width:780px; margin:14px 0 28px; }
+.price-page .pr-hero h1 em { color:var(--pricing-teal); font-family:'Libre Caslon Display',Georgia,serif; font-weight:400; }
+.price-page .pr-hero .pr-lead { font-size:1.1rem; color:#445e68; max-width:630px; line-height:1.75; }
+.price-page .pr-hero-actions,.price-page .pr-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin:25px 0 0; }
+.price-page .pr-hero-note { color:#627480; font-size:13px; margin-top:18px; }
+.price-page .pr-hero-card { background:#102d42; color:white; border:1px solid #24495a; border-radius:18px; padding:34px; box-shadow:0 22px 58px #0e374420; position:relative; overflow:hidden; }
+.price-page .pr-hero-card:after { content:""; position:absolute; right:-82px; bottom:-113px; width:275px; height:275px; border:1px solid #ffffff31; border-radius:50%; box-shadow:0 0 0 35px #ffffff09,0 0 0 85px #ffffff05; }
+.price-page .pr-hero-card > * { position:relative; z-index:1; }
+.price-page .pr-micro { font-size:12px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:#a4e0d4; }
+.price-page .pr-hero-card h2 { color:#fff; font-size:clamp(1.8rem,3vw,2.8rem); line-height:1.16; margin:25px 0 20px; }
+.price-page .pr-hero-card p { color:#d3e3e8; margin-bottom:22px; }
+.price-page .pr-rule { height:1px; background:#ffffff35; margin:25px 0 19px; }
+.price-page .pr-hero-mini { display:flex; gap:10px; align-items:center; font-size:14px; color:#eaf5f4; }
+.price-page .pr-dot { width:9px; height:9px; background:#a4e0d4; border-radius:50%; flex:none; }
+.price-page .pr-section { padding:86px 0; }
+.price-page .pr-soft { background:#eff6f4; }
+.price-page .pr-cream { background:#fafaf7; }
+.price-page .pr-eyebrow { display:block; text-transform:uppercase; font-size:12px; font-weight:850; letter-spacing:.15em; color:#007e7a; margin-bottom:12px; }
+.price-page .pr-section-heading { display:flex; align-items:end; justify-content:space-between; gap:36px; margin-bottom:36px; }
+.price-page .pr-section-heading h2 { max-width:650px; margin-bottom:0; font-size:clamp(2rem,3.5vw,3.5rem); }
+.price-page .pr-section-heading p { max-width:420px; color:#5b717d; margin:0; }
+.price-page .pr-card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.price-page .pr-service { display:flex; flex-direction:column; min-height:390px; background:#fff; border:1px solid var(--pricing-line); border-radius:15px; padding:30px; box-shadow:0 13px 40px #1a3a4909; transition:transform .16s,box-shadow .16s; }
+.price-page .pr-service:hover { transform:translateY(-3px); box-shadow:0 16px 46px #1a3a4915; }
+.price-page .pr-service.featured { border-color:#65b3a5; box-shadow:inset 0 4px #007e7a,0 13px 40px #1a3a4909; }
+.price-page .pr-service .pr-type { text-transform:uppercase; color:#087f79; font-size:12px; font-weight:850; letter-spacing:.12em; }
+.price-page .pr-service h3 { font-size:1.6rem; margin:18px 0 12px; }
+.price-page .pr-service p { color:#5e7480; font-size:14px; margin-bottom:16px; }
+.price-page .pr-service .pr-amount { color:#143145; font-family:Manrope,Arial,sans-serif; font-weight:800; font-size:22px; letter-spacing:-.025em; margin:10px 0; }
+.price-page .pr-service ul { padding-left:19px; color:#526976; margin:0 0 27px; font-size:14px; }
+.price-page .pr-service li { padding:3px 0; }
+.price-page .pr-service .pr-card-action { margin-top:auto; }
+.price-page .pr-service a { font-weight:800; color:#007e7a; }
+.price-page .pr-service a:hover { text-decoration:underline; }
+.price-page .pr-info-bar { display:flex; gap:13px; align-items:flex-start; background:#eef7f5; border:1px solid #d6ece8; border-radius:11px; padding:18px 22px; margin-top:22px; font-size:14px; color:#526976; }
+.price-page .pr-info-bar strong { color:#12354a; }
+.price-page .pr-process { display:grid; grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr); gap:90px; align-items:start; }
+.price-page .pr-process-intro { position:sticky; top:115px; }
+.price-page .pr-process-intro h2 { font-size:clamp(2.1rem,4vw,3.9rem); max-width:440px; }
+.price-page .pr-process-intro p { color:#617683; max-width:430px; }
+.price-page .pr-steps { border-top:1px solid var(--pricing-line); }
+.price-page .pr-step { display:grid; grid-template-columns:46px 1fr; gap:20px; border-bottom:1px solid var(--pricing-line); padding:24px 0; }
+.price-page .pr-step-num { display:grid; place-items:center; width:41px; height:41px; border-radius:50%; background:#e2f2ef; color:#007e7a; font-weight:900; font-size:13px; }
+.price-page .pr-step h3 { margin:0 0 8px; font-size:1.16rem; }
+.price-page .pr-step p { margin:0; font-size:14px; color:#58717d; }
+.price-page .pr-step a { color:#007e7a; text-decoration:underline; text-underline-offset:3px; }
+.price-page .pr-payment { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.price-page .pr-paycard { border-radius:15px; padding:32px; background:white; border:1px solid #d8e5e5; }
+.price-page .pr-paycard.dark { background:#112e42; color:white; border-color:#112e42; }
+.price-page .pr-paycard .pr-pill { display:inline-block; padding:4px 10px; background:#e6f5f1; color:#096962; border-radius:999px; font-size:12px; font-weight:800; }
+.price-page .pr-paycard.dark .pr-pill { background:#274e60; color:#a7e1d4; }
+.price-page .pr-paycard h3 { font-size:1.55rem; margin:19px 0 12px; }
+.price-page .pr-paycard.dark h3 { color:white; }
+.price-page .pr-paycard p { font-size:14px; color:#61747c; }
+.price-page .pr-paycard.dark p { color:#cee0e4; }
+.price-page .pr-paycard .btn { margin-top:8px; }
+.price-page .pr-terms-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.price-page .pr-term { border:1px solid #dee7e7; border-radius:13px; padding:25px 27px; background:#fff; }
+.price-page .pr-term h3 { font-size:1.12rem; margin:0 0 9px; }
+.price-page .pr-term p { color:#617580; font-size:14px; margin:0; }
+.price-page .pr-disclaimer { color:#5c737d; background:#edf3f2; border-radius:10px; padding:15px 20px; margin-top:23px; font-size:13px; line-height:1.65; }
+.price-page .pr-disclaimer a { text-decoration:underline; text-underline-offset:2px; }
+.price-page .pr-cta { background:#102a3f; color:white; padding:68px 0; }
+.price-page .pr-cta-inner { display:flex; align-items:center; justify-content:space-between; gap:30px; }
+.price-page .pr-cta h2 { color:white; font-size:clamp(2rem,3.4vw,3.3rem); max-width:680px; margin:10px 0 14px; }
+.price-page .pr-cta p { max-width:650px; color:#d3e2e4; margin-bottom:0; }
+.price-page .pr-cta .pr-cta-actions { display:flex; flex-wrap:wrap; gap:12px; flex-shrink:0; }
+.price-page .pr-white-button { display:inline-block; background:#fff; color:#102d42; padding:13px 19px; font-size:14px; font-weight:850; border-radius:9px; text-decoration:none; }
+.price-page .pr-white-button:hover { background:#dff6ed; }
+.price-page .pr-outline-button { display:inline-block; color:white; border:1px solid #78949a; border-radius:9px; padding:12px 18px; font-weight:800; font-size:14px; }
+.price-page .pr-outline-button:hover { border-color:white; }
+.price-page .pr-anchor-menu { display:flex; flex-wrap:wrap; gap:11px; border-bottom:1px solid var(--pricing-line); background:#fff; }
+.price-page .pr-anchor-menu .container { display:flex; gap:25px; overflow-x:auto; padding-top:12px; padding-bottom:12px; }
+.price-page .pr-anchor-menu a { flex:none; color:#395668; font-weight:750; font-size:13px; }
+.price-page .pr-anchor-menu a:hover { color:#007e7a; }
+.price-page .pr-terms-grid a,.price-page .pr-card-grid a { text-underline-offset:2px; }
+@media (max-width:1060px) {
+  .price-page .pr-hero-grid { grid-template-columns:1fr; gap:34px; }
+  .price-page .pr-hero-card { max-width:650px; }
+  .price-page .pr-process { gap:45px; }
+}
+@media (max-width:820px) {
+  .price-page .pr-card-grid { grid-template-columns:1fr; }
+  .price-page .pr-service { min-height:0; }
+  .price-page .pr-process { grid-template-columns:1fr; }
+  .price-page .pr-process-intro { position:static; }
+  .price-page .pr-payment,.price-page .pr-terms-grid { grid-template-columns:1fr; }
+  .price-page .pr-section-heading { display:block; }
+  .price-page .pr-section-heading p { margin-top:18px; }
+  .price-page .pr-cta-inner { display:block; }
+  .price-page .pr-cta .pr-cta-actions { margin-top:25px; }
+}
+@media (max-width:600px) {
+  .price-page .pr-hero { padding:60px 0; }
+  .price-page .pr-section { padding:60px 0; }
+  .price-page .pr-hero-card { padding:25px; }
+  .price-page .pr-step { gap:12px; }
+  .price-page .pr-cta { padding:55px 0; }
+  .price-page .pr-paycard { padding:25px; }
+  .price-page .pr-hero h1 { font-size:clamp(2.7rem,11vw,4rem); }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app">
+<div class="top-note">Ethical academic consulting • <strong>Research support with integrity</strong></div>
+<header class="site-header"><div class="container head-inner"><a aria-label="ScholarBridge home" class="brand" href="index.html"><span class="brand-symbol">SB</span><span class="brand-name">SCHOLAR BRIDGE<small>RESEARCH CONSULTANCY</small></span></a><nav aria-label="Main navigation" class="nav" id="main-nav"><a class="" href="index.html">Home</a><a class="" href="about.html">About</a><a class="" href="services.html">Services</a><a aria-current="page" class="active" href="pricing.html">Pricing</a><a class="" href="portfolio.html">Research Portfolio</a><a class="" href="insights.html">Insights</a><a class="" href="faq.html">FAQ</a><a class="" href="posters.html">Posters</a><a class="" href="book-consultation.html">Book Consultation</a><a class="" href="contact.html">Contact</a></nav><a class="btn btn-navy header-cta" href="book-consultation.html#enquiry">Request Consultation ↗</a><button aria-controls="main-nav" aria-expanded="false" aria-label="Toggle menu" class="menu-toggle" id="menu-toggle">☰</button></div></header>
+
+<main id="main" class="price-page">
+  <section class="pr-hero" aria-labelledby="pricing-heading">
+    <div class="container pr-hero-grid">
+      <div>
+        <span class="pr-eyebrow">ScholarBridge / Pricing &amp; process</span>
+        <h1 id="pricing-heading">Clear scope.<br><em>Thoughtful support.</em></h1>
+        <p class="pr-lead">A transparent approach to research consultancy. Explore the support available, understand each step, and request a personalized quotation before you commit.</p>
+        <div class="pr-hero-actions">
+          <a class="btn btn-teal" href="contact.html#enquiry">Request a quotation ↗</a>
+          <a class="btn btn-outline" href="https://calendar.app.google/Z8r54JtfaJ5eoSbQA" target="_blank" rel="noopener noreferrer">View consultation times ↗</a>
+        </div>
+        <p class="pr-hero-note">No prices are published until the service scope and fee have been agreed individually.</p>
+      </div>
+      <aside class="pr-hero-card" aria-label="Our pricing approach">
+        <div class="pr-micro">A better starting point</div>
+        <h2>A written quote.<br>A clear next step.</h2>
+        <p>Every project is different. We discuss your question, deliverables, timeline and any consultation fee before confirming an engagement.</p>
+        <div class="pr-rule"></div>
+        <div class="pr-hero-mini"><span class="pr-dot"></span> Research integrity comes first</div>
+      </aside>
+    </div>
+  </section>
+
+  <nav class="pr-anchor-menu" aria-label="On this page">
+    <div class="container">
+      <a href="#options">Service options</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#payment">Payment methods</a>
+      <a href="#terms">Service terms</a>
+    </div>
+  </nav>
+
+  <section class="pr-section pr-cream" id="options" aria-labelledby="options-heading">
+    <div class="container">
+      <div class="pr-section-heading">
+        <div><span class="pr-eyebrow">Choose your starting point</span><h2 id="options-heading">Research support, tailored to your needs.</h2></div>
+        <p>Fees depend on your research question, depth of work, scope and timing. We confirm the amount in writing before asking for payment.</p>
+      </div>
+      <div class="pr-card-grid">
+        <article class="pr-service featured">
+          <span class="pr-type">01 / Live conversation</span>
+          <h3>Research consultation</h3>
+          <p>One focused online session to discuss your research challenge and appropriate next steps.</p>
+          <div class="pr-amount">30 minutes</div>
+          <ul>
+            <li>Research design or methods discussion</li>
+            <li>Analysis or publication-planning guidance</li>
+            <li>Available times shown in your time zone</li>
+          </ul>
+          <div class="pr-card-action"><a href="https://calendar.app.google/Z8r54JtfaJ5eoSbQA" target="_blank" rel="noopener noreferrer">Check available times →</a></div>
+        </article>
+        <article class="pr-service">
+          <span class="pr-type">02 / Targeted support</span>
+          <h3>Focused expert guidance</h3>
+          <p>Support for a specific methodology, survey, statistical analysis or manuscript challenge.</p>
+          <div class="pr-amount">Fee on quotation</div>
+          <ul>
+            <li>Defined question and scope</li>
+            <li>Agreed feedback or guidance</li>
+            <li>Clear deliverables and schedule</li>
+          </ul>
+          <div class="pr-card-action"><a href="contact.html#enquiry">Request a focused quote →</a></div>
+        </article>
+        <article class="pr-service">
+          <span class="pr-type">03 / Project-based</span>
+          <h3>Tailored research support</h3>
+          <p>For multi-stage needs, such as a structured literature review, analysis workflow or research mentoring plan.</p>
+          <div class="pr-amount">Custom proposal</div>
+          <ul>
+            <li>Written scope and milestones</li>
+            <li>Agreed deliverables and review points</li>
+            <li>Project-specific payment arrangement</li>
+          </ul>
+          <div class="pr-card-action"><a href="contact.html#enquiry">Discuss your project →</a></div>
+        </article>
+      </div>
+      <div class="pr-info-bar"><span aria-hidden="true">ⓘ</span><div><strong>Important:</strong> Booking an available calendar time or submitting an enquiry does not, by itself, confirm a paid service. The consultation fee, scope and confirmation process are agreed separately.</div></div>
+    </div>
+  </section>
+
+  <section class="pr-section pr-soft" id="how-it-works" aria-labelledby="steps-heading">
+    <div class="container pr-process">
+      <div class="pr-process-intro">
+        <span class="pr-eyebrow">How it works</span>
+        <h2 id="steps-heading">From first enquiry to a clear plan.</h2>
+        <p>We keep the process practical. You know what has been agreed, what happens next and how any payment is verified.</p>
+        <div class="pr-actions"><a class="btn btn-teal" href="contact.html#enquiry">Start an enquiry ↗</a></div>
+      </div>
+      <div class="pr-steps">
+        <div class="pr-step"><div class="pr-step-num">01</div><div><h3>Tell us about your research</h3><p>Use the existing <a href="contact.html#enquiry">enquiry form</a> to describe your topic, services needed and target timeline. Please do not submit sensitive datasets or unpublished documents through the public form.</p></div></div>
+        <div class="pr-step"><div class="pr-step-num">02</div><div><h3>Receive a personalized quotation</h3><p>We review the request and, if suitable, agree the service scope, deliverables, turnaround, currency and fee in writing.</p></div></div>
+        <div class="pr-step"><div class="pr-step-num">03</div><div><h3>Arrange a consultation if needed</h3><p>Choose from the <a href="https://calendar.app.google/Z8r54JtfaJ5eoSbQA" target="_blank" rel="noopener noreferrer">30-minute online booking calendar</a> or <a href="book-consultation.html#enquiry">request a consultation</a>. Any fee and engagement details are confirmed separately.</p></div></div>
+        <div class="pr-step"><div class="pr-step-num">04</div><div><h3>Follow agreed payment instructions</h3><p>Once you receive an invoice or written payment request, use the approved method. For eligible Pakistan transfers, see the <a href="sadapay.html">SadaPay instructions</a>. Never pay an unconfirmed amount.</p></div></div>
+        <div class="pr-step"><div class="pr-step-num">05</div><div><h3>Receive confirmation and begin</h3><p>We verify receipt of funds where payment is required, then confirm the service arrangements and agreed next steps.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pr-section pr-cream" id="payment" aria-labelledby="payments-heading">
+    <div class="container">
+      <div class="pr-section-heading"><div><span class="pr-eyebrow">Payments &amp; confirmation</span><h2 id="payments-heading">A clear way to pay, after you receive a quote.</h2></div><p>We do not collect card details on this website. Payment instructions are provided only after the amount has been agreed.</p></div>
+      <div class="pr-payment">
+        <article class="pr-paycard">
+          <span class="pr-pill">Pakistan / Manual transfer</span>
+          <h3>SadaPay bank transfer</h3>
+          <p>For an agreed invoice, clients may view our SadaPay receiving details and use a local bank or wallet transfer, subject to availability, provider permissions and account limits.</p>
+          <p><strong>How confirmation works:</strong> share the invoice number and transfer reference; we verify receipt before confirming a paid service.</p>
+          <a class="btn btn-teal" href="sadapay.html">View SadaPay instructions ↗</a>
+        </article>
+        <article class="pr-paycard dark">
+          <span class="pr-pill">International clients</span>
+          <h3>Request payment instructions</h3>
+          <p>International Visa/Mastercard checkout is not currently enabled on ScholarBridge. Contact us to discuss a suitable, available method for your location.</p>
+          <p>We will not request card numbers, CVV codes or passwords through email, WhatsApp or our enquiry form.</p>
+          <a class="btn btn-white" href="contact.html#enquiry">Ask about international payment ↗</a>
+        </article>
+      </div>
+      <p class="pr-disclaimer">SadaPay payments are manual transfers and are not processed through this page. Availability for commercial use depends on the payment provider's rules. Do not transfer funds until ScholarBridge has confirmed the invoice and payment method.</p>
+    </div>
+  </section>
+
+  <section class="pr-section pr-soft" id="terms" aria-labelledby="terms-heading">
+    <div class="container">
+      <div class="pr-section-heading"><div><span class="pr-eyebrow">Service terms at a glance</span><h2 id="terms-heading">Clear expectations, before work begins.</h2></div><p>These points summarize our current website guidance. Your written quotation and service agreement should specify the project-specific terms.</p></div>
+      <div class="pr-terms-grid">
+        <article class="pr-term"><h3>Scope, fee &amp; deliverables</h3><p>An enquiry or calendar booking is not an automatic engagement. Services, fees, deadlines and deliverables are agreed separately in writing.</p></article>
+        <article class="pr-term"><h3>Changes, cancellation &amp; refunds</h3><p>Ask about cancellation, rescheduling and refund conditions before paying. No universal refund amount or deadline is promised here; applicable terms should be stated in your written agreement and follow applicable law.</p></article>
+        <article class="pr-term"><h3>Confidentiality &amp; document handling</h3><p>Share only a non-sensitive summary through public forms. We can agree an appropriate channel and handling arrangements before receiving research materials.</p></article>
+        <article class="pr-term"><h3>Academic integrity</h3><p>We provide research guidance and editorial support, not ghostwriting, fabricated data, false authorship or guaranteed publication or academic results.</p></article>
+      </div>
+      <p class="pr-disclaimer">Read our <a href="terms.html">Terms of Use</a>, <a href="privacy.html">Privacy Notice</a>, <a href="confidentiality.html">Confidentiality information</a> and <a href="integrity.html">Academic Integrity Standards</a>. The site's general terms are currently marked as a draft for business-owner and legal review.</p>
+    </div>
+  </section>
+
+  <section class="pr-cta" aria-labelledby="cta-heading">
+    <div class="container pr-cta-inner">
+      <div><span class="pr-eyebrow" style="color:#a4e0d4">Ready to discuss your work?</span><h2 id="cta-heading">Begin with a clear research question.</h2><p>Tell us what you need. We'll discuss an appropriate service, realistic next steps and any quotation before work starts.</p></div>
+      <div class="pr-cta-actions"><a class="pr-white-button" href="contact.html#enquiry">Request a quotation →</a><a class="pr-outline-button" href="https://wa.me/971527177257?text=Hello%20ScholarBridge%2C%20I%20would%20like%20a%20quotation%20for%20research%20consultancy%20services." target="_blank" rel="noopener noreferrer">Message us</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a aria-label="ScholarBridge home" class="brand" href="index.html"><span class="brand-symbol">SB</span><span class="brand-name">SCHOLAR BRIDGE<small>RESEARCH CONSULTANCY</small></span></a><p>Independent guidance for researchers, doctoral scholars and academic teams. Thoughtful research. Clearer decisions.</p></div><div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Research Portfolio</a></div><div><h4>More</h4><a href="insights.html">Insights</a><a href="pricing.html">Pricing &amp; How It Works</a><a href="faq.html">FAQ</a><a href="posters.html">Posters</a><a href="book-consultation.html">Book Consultation</a><a href="contact.html">Contact</a><a href="integrity.html">Academic Integrity</a></div><div><h4>Contact</h4><a href="mailto:scholarbridgeresearch1@gmail.com">scholarbridgeresearch1@gmail.com</a><a href="https://wa.me/971527177257" rel="noopener" target="_blank">WhatsApp: +971 52 717 7257</a><a href="privacy.html">Privacy Notice</a><a href="terms.html">Terms of Use</a><a href="confidentiality.html">Research Confidentiality</a><a download="" href="assets/scholarbridge-brochure.pdf">Business brochure (PDF)</a></div></div><div class="footer-bottom"><span>© 2026 Scholar Bridge Research Consultancy. All rights reserved.</span><span>Research integrity matters. No guaranteed publication outcomes.</span></div></div></footer>
+<a aria-label="Chat with ScholarBridge on WhatsApp" class="wa-float" href="https://wa.me/971527177257?text=Hello%20Scholar%20Bridge%2C%20I%20would%20like%20to%20enquire%20about%20research%20consultancy%20services." rel="noopener noreferrer" target="_blank">✆</a>
+</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
