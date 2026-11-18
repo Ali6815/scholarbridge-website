@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Manual SadaPay bank transfer instructions for ScholarBridge Research Consultancy clients in Pakistan.">
+  <title>Pay via SadaPay | ScholarBridge Research Consultancy</title>
+  <style>
+    :root {color-scheme:light;--navy:#123047;--teal:#0e817f;--pale:#eef8f7;--muted:#506979;--border:#dbe7e9}
+    *{box-sizing:border-box}
+    body{margin:0;background:#f6f9fb;color:var(--navy);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+    .sitebar{background:#fff;border-bottom:1px solid var(--border)}
+    .sitebar-inner{max-width:960px;margin:auto;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .brand{font-size:1.05rem;font-weight:750;text-decoration:none;color:var(--navy)}
+    .back{text-decoration:none;color:var(--teal);font-weight:650}
+    main{max-width:720px;margin:54px auto 72px;padding:0 20px}
+    .eyebrow{color:var(--teal);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+    h1{font-size:clamp(2rem,5vw,2.65rem);line-height:1.2;margin:10px 0 14px}
+    p{color:var(--muted);margin:0 0 20px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:0 12px 30px rgba(16,48,71,.06);padding:26px;margin-top:26px}
+    .provider{font-weight:800;color:var(--teal);margin-bottom:18px;font-size:1.2rem}
+    .field{padding:16px 0;border-top:1px solid var(--border)}
+    .label{font-size:.84rem;color:var(--muted);margin-bottom:5px}
+    .value{font-weight:700;font-size:1.12rem;overflow-wrap:anywhere;letter-spacing:.025em}
+    .copy-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    button,.cta{background:var(--teal);color:#fff;border:0;border-radius:8px;cursor:pointer;text-decoration:none;padding:11px 16px;display:inline-block;font:inherit;font-size:.9rem;font-weight:700}
+    button:hover,.cta:hover{background:#086c6b}
+    .note{background:var(--pale);border-radius:12px;padding:19px 21px;margin-top:24px}
+    .note strong{color:var(--navy)}
+    .note p{margin:8px 0 0}
+    ol{padding-left:22px;color:var(--muted)}
+    li{padding-bottom:7px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .secondary{background:#fff;color:var(--teal);border:1px solid var(--teal)}
+    .secondary:hover{background:var(--pale)}
+    .foot{text-align:center;color:var(--muted);font-size:.87rem;padding:25px}
+    @media(max-width:480px){.card{padding:20px}.copy-row{align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header class="sitebar"><div class="sitebar-inner">
+    <a class="brand" href="/">ScholarBridge Research Consultancy</a>
+    <a class="back" href="/">Back to website</a>
+  </div></header>
+  <main>
+    <div class="eyebrow">Payment instructions · Pakistan</div>
+    <h1>Pay via SadaPay</h1>
+    <p>Use the details below to make a manual bank transfer for an agreed ScholarBridge invoice or consultation. Please confirm the invoice amount before sending payment.</p>
+    <section class="card" aria-label="SadaPay payment details">
+      <div class="provider">SadaPay · Bank transfer</div>
+      <div class="field"><div class="label">Account holder</div><div class="value">IMRAN ALAM</div></div>
+      <div class="field"><div class="label">SadaPay account number (local transfers)</div><div class="copy-row"><span class="value" id="account">26866365657</span><button type="button" data-copy="account">Copy number</button></div></div>
+      <div class="field"><div class="label">IBAN</div><div class="copy-row"><span class="value" id="iban">PK13SADA0000026866365657</span><button type="button" data-copy="iban">Copy IBAN</button></div></div>
+    </section>
+    <section class="note">
+      <strong>How payment confirmation works</strong>
+      <ol>
+        <li>Request an invoice and confirm your payment amount with ScholarBridge.</li>
+        <li>Send the transfer from your banking or wallet app to the account shown above.</li>
+        <li>Share the invoice number and payment reference with ScholarBridge.</li>
+        <li>We will confirm the booking or service after the transfer is received and verified.</li>
+      </ol>
+      <p><strong>Important:</strong> This is a manual transfer, not an instant card checkout. Do not treat a transfer screenshot as proof of receipt. Transfers are subject to payment-provider rules and account limits.</p>
+    </section>
+    <div class="actions">
+      <a class="cta" href="https://wa.me/971527177257?text=Hello%20ScholarBridge%2C%20I%20would%20like%20to%20confirm%20my%20SadaPay%20transfer%20for%20invoice%20number%3A%20" target="_blank" rel="noopener noreferrer">Confirm payment on WhatsApp</a>
+      <a class="cta secondary" href="mailto:scholarbridgeresearch1@gmail.com?subject=ScholarBridge%20SadaPay%20payment%20confirmation">Email payment reference</a>
+    </div>
+  </main>
+  <footer class="foot">ScholarBridge Research Consultancy · Client payment instructions</footer>
+  <script>
+    document.querySelectorAll('[data-copy]').forEach(button => {
+      button.addEventListener('click', async () => {
+        const value = document.getElementById(button.dataset.copy).textContent.trim();
+        try {
+          await navigator.clipboard.writeText(value);
+          const old = button.textContent;
+          button.textContent = 'Copied';
+          setTimeout(() => button.textContent = old, 1600);
+        } catch (_) { button.textContent = 'Select and copy'; }
+      });
+    });
+  </script>
+</body>
+</html>
